@@ -110,21 +110,21 @@ jobs:
         mv out/pakkit-darwin-x64 out/macos/pakkit-macos-x64
 
     - name: Upload Windows artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ github.ref != 'refs/heads/master' }}
       with:
         name: pakkit-windows-x64
         path: out/windows/
 
     - name: Upload Linux artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ github.ref != 'refs/heads/master' }}
       with:
         name: pakkit-linux-x64
         path: out/linux/
 
     - name: Upload macOS artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ github.ref != 'refs/heads/master' }}
       with:
         name: pakkit-macos-x64
